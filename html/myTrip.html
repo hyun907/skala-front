@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 여행지</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item active" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">나의 여행지</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner">
+                    <div class="eyebrow">Travel Notes</div>
+                    <h1 class="page-title has-title-icon">나의 여행지 <img class="title-icon title-icon-trip" src="../media/ic_trip.png" alt=""></h1>
+
+                    <div class="trip-section-title">🇰🇷 국내</div>
+                    <div class="trip-sub">🌊 강릉</div>
+                    <div class="trip-grid">
+                        <figure class="trip-card">
+                            <img src="../media/gangneung.JPG" alt="강릉 바다 풍경">
+                            <figcaption class="body">대학교 기자단에서 해돋이 콘텐츠를 찍기 위해 방문했습니다.</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/gangneung_2.jpg" alt="강릉 여행 사진">
+                            <figcaption class="body">바다 사진입니다!</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/gangneung_3.jpg" alt="강릉 여행 추가 사진">
+                            <figcaption class="body">두부로 만든 에이드였는데 맛은 그닥...</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="trip-section-title">🌏 해외</div>
+                    <div class="trip-sub">🍁 교토</div>
+                    <div class="trip-grid">
+                        <figure class="trip-card">
+                            <img src="../media/kyoto.JPG" alt="교토 풍경">
+                            <figcaption class="body">교토에 혼자서 힐링 여행을 다녀왔습니다!</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/kyoto_2.jpg" alt="교토 말차 디저트">
+                            <figcaption class="body">교토에서 말차 디저트를 즐겼습니다.</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/kyoto_3.jpg" alt="교토 여행 추가 사진">
+                            <figcaption class="body">좋아하는 만화책 발견!</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="trip-sub">🗼 도쿄</div>
+                    <div class="trip-grid">
+                        <figure class="trip-card">
+                            <img src="../media/tokyo.jpg" alt="도쿄 풍경">
+                            <figcaption class="body">제가 좋아하는 캐릭터와 사진을 찍었습니다.</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/tokyo_2.JPG" alt="도쿄에서 만난 우사기 캐릭터">
+                            <figcaption class="body">우사기라는 친구입니다.</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/tokyo_3.jpg" alt="도쿄 야경">
+                            <figcaption class="body">시부야 스크램블 교차로 쪽입니다!</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="trip-sub">🏙️ 상하이</div>
+                    <div class="trip-grid">
+                        <figure class="trip-card">
+                            <img src="../media/shanghai.JPG" alt="상하이 풍경">
+                            <figcaption class="body">상하이에서 왕홍 체험을 해보았습니다.</figcaption>
+                        </figure>
+                        <figure class="trip-card">
+                            <img src="../media/shanghai_3.jpg" alt="상하이 여행 추가 사진">
+                            <figcaption class="body">I ♥︎ SH (TMI: 제 이름 영어 약자도 SH입니다 ㅎ.ㅎ)</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="sec-label" style="margin-top:36px">🎬 여행 하이라이트 영상</div>
+                    <div class="media-block">
+                        <video controls autoplay muted loop playsinline preload="auto">
+                            <source src="../media/shanghai_cat.mp4" type="video/mp4">
+                            <source src="../media/shanghai_cat.mov" type="video/quicktime">
+                            브라우저가 video 태그를 지원하지 않습니다.
+                        </video>
+                        <div class="media-cap">상하이에서 만난 골목 고양이 영상입니다.</div>
+                    </div>
+
+                    <div class="sec-label" style="margin-top:28px">🎵 여행 배경음악</div>
+                    <div class="media-block">
+                        <audio controls>
+                            <source src="../media/trip.mp3" type="audio/mpeg">
+                            브라우저가 audio 태그를 지원하지 않습니다.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

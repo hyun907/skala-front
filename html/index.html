@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백승현의 유니버스</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+    <script src="../js/upDown.js" defer></script>
+    <script src="../js/grade.js" defer></script>
+    <script src="../js/bag.js" defer></script>
+    <script src="../js/baseConverter.js" defer></script>
+    <script type="module" src="../js/realtimeInfo.js"></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item active" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+
+            <!-- 미니게임: Up-Down 숫자 맞추기 -->
+            <div class="side-label">미니게임</div>
+            <nav class="side-nav">
+                <a class="nav-item game-launch" href="pixelJump.html">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_pixel.svg" alt=""></span>
+                    <span>픽셀 점프</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </a>
+                <button type="button" class="nav-item game-launch" onclick="startUpDown()">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_updown.svg" alt=""></span>
+                    <span>Up-Down 게임</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </button>
+                <button type="button" class="nav-item game-launch" onclick="startGrade()">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_calc.svg" alt=""></span>
+                    <span>성적 계산기</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </button>
+                <button type="button" class="nav-item game-launch" onclick="showMyBag()">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_bag.svg" alt=""></span>
+                    <span>내 가방 보기</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </button>
+                <button type="button" class="nav-item game-launch" onclick="startBaseConverter()">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_base_ntoten.svg" alt=""></span>
+                    <span>진법 변환기 (N→10)</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </button>
+                <button type="button" class="nav-item game-launch" onclick="startToBaseConverter()">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_base_tenton.svg" alt=""></span>
+                    <span>진법 변환기 (10→N)</span>
+                    <span class="game-play" aria-hidden="true">▶</span>
+                </button>
+            </nav>
+
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">유니버스</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner">
+                    <div class="eyebrow">유니버스</div>
+                    <div class="title-row">
+                        <h1 class="page-title home has-title-icon">백승현 <img class="title-icon title-icon-rocket" src="../media/ic_rocket.png" alt=""></h1>
+                        <div class="pill">프로필 · 수업 · 휴일 · 여행을 모은 개인 Hub</div>
+                    </div>
+
+                    <!-- 폴더 그리드 -->
+                    <div class="folder-grid">
+                        <a class="folder" href="myClass.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">수업</span></a>
+                        <a class="folder" href="myHoliday.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">휴일</span></a>
+                        <a class="folder" href="myProfile.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">프로필</span></a>
+                        <a class="folder" href="myTrip.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">여행</span></a>
+                        <a class="folder" href="signUp.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">가입</span></a>
+                        <a class="folder" href="pixelJump.html"><span class="folder-icon"><span class="tab"></span><span class="body"></span></span><span class="label">픽셀 점프</span></a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="split">
+                        <!-- 본문 -->
+                        <div class="stack">
+                            <div>
+                                <div class="sec-label">📸 앨범 베스트 컷</div>
+                                <div class="photo-card">
+                                    <img src="../media/kyoto.JPG" alt="교토 여행 사진">
+                                    <div class="cap">교토에서 혼자 힐링 여행 · 2026</div>
+                                </div>
+                            </div>
+
+                            <!-- 실시간 세계 날씨 (DOM/이벤트 과제) -->
+                            <div>
+                                <div class="sec-label">🌏 실시간 세계 날씨</div>
+                                <div class="card">
+                                    <select id="city-select" class="weather-select">
+                                        <option value="">도시를 선택하세요</option>
+                                        <option value="seoul">서울</option>
+                                        <option value="gangneung">강릉</option>
+                                        <option value="busan">부산</option>
+                                        <option value="kyoto">교토</option>
+                                        <option value="shanghai">상하이</option>
+                                    </select>
+                                    <div id="weather-box" class="weather-box">
+                                        <p class="weather-hint">도시를 선택하면 좌표가 표시됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 사이드 -->
+                        <div class="stack">
+                            <div class="about">
+                                <div class="kicker">ABOUT ME</div>
+                                <h3>기술로 경험을 바꿀 수 있다 믿습니다.</h3>
+                                <p>기술로 세상을 조금 더 나은 방향으로 바꾼다는 믿음 아래, 발전을 만들어가는 AX 인재로 성장하고 있습니다.</p>
+                                <a class="btn" href="myProfile.html">프로필 보기 →</a>
+                            </div>
+                            <div class="card">
+                                <div class="sec-label" style="margin-bottom:6px">🎮 미니게임</div>
+                                <p style="font-size:13px;color:var(--muted);line-height:1.5">쉬어가는 코너! 숫자 맞추기부터 성적 계산까지, 가볍게 즐길 수 있는 미니게임을 모았어요.</p>
+                                <div class="game-list">
+                                    <a class="game-btn game-btn-play" href="pixelJump.html">픽셀 점프 (← → · Space) <span class="arrow">▶</span></a>
+                                    <button type="button" class="game-btn" onclick="startUpDown()">Up-Down 숫자 맞추기 <span class="arrow">▶</span></button>
+                                    <button type="button" class="game-btn" onclick="startGrade()">성적 계산기 <span class="arrow">▶</span></button>
+                                    <button type="button" class="game-btn" onclick="showMyBag()">내 가방 보기 <span class="arrow">▶</span></button>
+                                    <button type="button" class="game-btn" onclick="startBaseConverter()">진법 변환기 (N→10) <span class="arrow">▶</span></button>
+                                    <button type="button" class="game-btn" onclick="startToBaseConverter()">진법 변환기 (10→N) <span class="arrow">▶</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

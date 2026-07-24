@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소개</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item active" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">나의 프로필</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner">
+                    <div class="profile-head">
+                        <div>
+                            <div class="avatar"><img src="../media/profile.png" alt="백승현 프로필 사진"></div>
+                            <div class="profile-name">
+                                <div class="nm">백승현</div>
+                                <div class="role">SKALA 교육생</div>
+                            </div>
+                        </div>
+                        <div class="profile-body">
+                            <h2>소개</h2>
+                            <p style="font-size:16px;line-height:1.7;margin-top:12px;max-width:560px">안녕하세요! SKALA 교육생 백승현입니다. UIUX 디자인과 프론트엔드 위주로 여러 프로젝트를 진행해왔고, SKALA에선 더 많은 것을 얻어가고 싶습니다!</p>
+
+                            <h2>나를 설명하는 단어들</h2>
+                            <dl class="def-list">
+                                <div class="def">
+                                    <dt class="def-title">🚀 먼저 움직이는 실행력</dt>
+                                    <dd class="def-description">필요한 일이 보이면 역할을 기다리기보다, 직접 배우고 부딪히며 팀의 막힌 부분을 해결합니다. 새로운 도구도 빠르게 익혀 실제 결과물로 연결하는 편입니다.</dd>
+                                </div>
+                                <div class="def">
+                                    <dt class="def-title">🧩 문제를 쪼개는 집요함</dt>
+                                    <dd class="def-description">결과가 마음에 들지 않을 때 감으로 넘기지 않고, 원인을 하나씩 나눠 비교하며 답을 찾습니다. 해결될 때까지 가설을 세우고 검증하는 과정을 꾸준히 반복합니다.</dd>
+                                </div>
+                                <div class="def">
+                                    <dt class="def-title">🤝 함께 답을 찾는 소통</dt>
+                                    <dd class="def-description">혼자 해결하는 데 그치지 않고, 문제와 해결 방향을 팀원이 이해하기 쉽게 정리해 공유합니다. 코드 리뷰와 교육 경험을 통해 서로의 생각을 연결할 때 더 좋은 결과가 나온다는 것을 배웠습니다.</dd>
+                                </div>
+                            </dl>
+
+                            <h2>좋아하는 것 &amp; 올해 할 일</h2>
+                            <div class="split" style="margin-top:12px">
+                                <div class="card">
+                                    <div class="sec-label" style="margin-bottom:8px">🍜 좋아하는 음식</div>
+                                    <ul style="margin:0 0 0 18px;font-size:14.5px;line-height:1.9;color:var(--sub)">
+                                        <li>마라샹궈</li>
+                                        <li>아이스 아메리카노</li>
+                                        <li>알리오 올리오 파스타</li>
+                                    </ul>
+                                </div>
+                                <div class="card">
+                                    <div class="sec-label" style="margin-bottom:8px">✅ 올해 할 일</div>
+                                    <ol style="margin:0 0 0 18px;font-size:14.5px;line-height:1.9;color:var(--sub)">
+                                        <li>토스 시험 응시</li>
+                                        <li>SKALA 열심히 수료하기</li>
+                                        <li>포폴 사이트 정리하기</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <details class="stack-details">
+                                <summary>
+                                    <span class="stack-details-title" role="heading" aria-level="2">웹 프론트엔드 기술 스택</span>
+                                    <span class="stack-details-chevron" aria-hidden="true"></span>
+                                </summary>
+                                <div class="stack-scroll">
+                                    <div class="stack-table">
+                                        <div class="stack-head">
+                                            <span>구분</span>
+                                            <span>😊 많이 해봤어요</span>
+                                            <span>👀 해본 적 있어요</span>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">Co-work</div>
+                                            <div class="stack-tags"><span class="tag tag-pink">Figma</span><span class="tag tag-pink">Notion</span><span class="tag tag-pink">Slack</span></div>
+                                            <div class="stack-tags"><span class="tag tag-pink">Jira</span></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">스타일링</div>
+                                            <div class="stack-tags"><span class="tag tag-green">Tailwind CSS</span><span class="tag tag-green">styled-component</span><span class="tag tag-green">CSS Modules</span></div>
+                                            <div class="stack-tags"><span class="tag tag-green">vanilla extract</span><span class="tag tag-green">Emotion</span></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">상태관리</div>
+                                            <div class="stack-tags"><span class="tag tag-yellow">zustand</span><span class="tag tag-yellow">recoil</span><span class="tag tag-yellow">Tanstack Query</span></div>
+                                            <div class="stack-tags"></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">Language</div>
+                                            <div class="stack-tags"><span class="tag tag-red">JavaScript</span><span class="tag tag-red">TypeScript</span></div>
+                                            <div class="stack-tags"><span class="tag tag-red">Java</span><span class="tag tag-red">Python</span></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">패키지 관리</div>
+                                            <div class="stack-tags"><span class="tag tag-blue">npm</span><span class="tag tag-blue">yarn</span><span class="tag tag-blue">pnpm</span></div>
+                                            <div class="stack-tags"></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">Framework</div>
+                                            <div class="stack-tags"><span class="tag tag-tan">React</span><span class="tag tag-tan">Next.js(App Router)</span></div>
+                                            <div class="stack-tags"><span class="tag tag-tan">React Native(Expo)</span><span class="tag tag-tan">Next.js(Page Router)</span></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">Deploy</div>
+                                            <div class="stack-tags"><span class="tag tag-tan">Vercel</span></div>
+                                            <div class="stack-tags"></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">번들러</div>
+                                            <div class="stack-tags"><span class="tag tag-purple">Vite</span></div>
+                                            <div class="stack-tags"></div>
+                                        </div>
+                                        <div class="stack-row">
+                                            <div class="stack-cat">HTTP Client</div>
+                                            <div class="stack-tags"><span class="tag tag-gray">axios</span></div>
+                                            <div class="stack-tags"><span class="tag tag-gray">ky</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <h2>연락처</h2>
+                            <div class="split" style="margin-top:12px">
+                                <div class="card">
+                                    <div style="font-size:12px;color:var(--faint);font-weight:600">이메일</div>
+                                    <div style="font-size:14px;color:var(--sub);margin-top:4px">seunghyun020907@naver.com</div>
+                                </div>
+                                <div class="card">
+                                    <div style="font-size:12px;color:var(--faint);font-weight:600">추천 학습 사이트</div>
+                                    <div style="font-size:14px;margin-top:4px"><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools ↗</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

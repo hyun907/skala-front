@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 수업</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+    <script src="../js/grade.js" defer></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item active" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">나의 수업</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner">
+                    <div class="eyebrow">SKALA 과정</div>
+                    <h1 class="page-title has-title-icon">나의 수업 <img class="title-icon" src="../media/ic_book.png" alt=""></h1>
+                    <p class="lead">AX와 관련된 개발 이론부터 실습까지 배우고 있는 과목들이에요. 진행률로 학습 여정을 확인해 보세요.</p>
+
+                    <!-- 과목 진행률 -->
+                    <div class="class-grid">
+                        <div class="card class-card">
+                            <div class="head"><span class="nav-chip" style="background:#ef7a85"></span><span class="name">HTML / CSS</span></div>
+                            <p class="desc">웹의 뼈대와 스타일. 시맨틱 태그와 레이아웃.</p>
+                            <div class="progress"><div class="bar" style="width:95%;background:hsl(354, 79%, 71%)"></div></div>
+                            <div class="pct">95% 완료</div>
+                        </div>
+                        <div class="card class-card">
+                            <div class="head"><span class="nav-chip" style="background:#f5b544"></span><span class="name">JavaScript</span></div>
+                            <p class="desc">DOM 조작과 이벤트, 그리고 미니게임 제작.</p>
+                            <div class="progress"><div class="bar" style="width:30%;background:hsl(42, 87%, 65%)"></div></div>
+                            <div class="pct">30% 완료</div>
+                        </div>
+                        <div class="card class-card">
+                            <div class="head"><span class="nav-chip" style="background:#3b82f6"></span><span class="name">데이터분석 · AIOps</span></div>
+                            <p class="desc">데이터 분석 개요와 기초 통계 다지기.</p>
+                            <div class="progress"><div class="bar" style="width:50%;background:#3b82f6"></div></div>
+                            <div class="pct">50% 완료</div>
+                        </div>
+                        <div class="card class-card">
+                            <div class="head"><span class="nav-chip" style="background:#af7bef"></span><span class="name">LLM · Transformer</span></div>
+                            <p class="desc">생성형 AI와 트랜스포머 아키텍처 이해.</p>
+                            <div class="progress"><div class="bar" style="width:100%;background:#af7bef"></div></div>
+                            <div class="pct">100% 완료</div>
+                        </div>
+                    </div>
+
+                    <div class="sec-label" style="margin-top:36px">🧮 성적 계산기</div>
+                    <div class="card">
+                        <p style="font-size:14px;color:var(--sub2);line-height:1.6;margin-bottom:4px">HTML · CSS · JavaScript 세 과목의 점수를 차례로 입력하면 총점과 평균을 계산하고 합격 여부와 등급을 알려드려요.</p>
+                        <div class="game-list">
+                            <button type="button" class="game-btn game-btn-play" onclick="startGrade()">성적 계산기 실행 🧮 <span class="arrow">▶ 시작</span></button>
+                        </div>
+                    </div>
+
+                    <div class="sec-label" style="margin-top:36px">🗓️ 이번 학기 시간표</div>
+                    <div class="table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>⏰ 시간</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 ~ 10:00</td>
+                                    <td rowspan="4">📊 데이터분석 및 AIOps<br>(데이터 분석 개요 및 기초통계)</td>
+                                    <td rowspan="4">🤖 LLM과 Transformer<br>아키텍처 (1)</td>
+                                    <td rowspan="4">🧠 LLM과 Transformer<br>아키텍처 (2)</td>
+                                    <td rowspan="4">🎨 HTML, CSS</td>
+                                    <td rowspan="4">⚡ JavaScript</td>
+                                </tr>
+                                <tr><td>10:00 ~ 11:00</td></tr>
+                                <tr><td>11:00 ~ 12:00</td></tr>
+                                <tr><td>12:00 ~ 12:30</td></tr>
+                                <tr>
+                                    <td>12:30 ~ 13:30</td>
+                                    <td class="lunch" colspan="5">🍽️ 점심시간</td>
+                                </tr>
+                                <tr>
+                                    <td>13:30 ~ 14:00</td>
+                                    <td rowspan="5">💻 데이터분석 및<br>AIOps 실습</td>
+                                    <td rowspan="5">💻 LLM Transformer<br>(1) 실습</td>
+                                    <td rowspan="5">💻 LLM Transformer<br>(2) 실습</td>
+                                    <td rowspan="5">💻 HTML, CSS 실습</td>
+                                    <td rowspan="5">💻 JavaScript 실습</td>
+                                </tr>
+                                <tr><td>14:00 ~ 15:00</td></tr>
+                                <tr><td>15:00 ~ 16:00</td></tr>
+                                <tr><td>16:00 ~ 17:00</td></tr>
+                                <tr><td>17:00 ~ 18:00</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

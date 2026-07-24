@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>픽셀 점프</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+    <script src="../js/pixelJump.js" defer></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+
+            <div class="side-label">미니게임</div>
+            <nav class="side-nav">
+                <a class="nav-item active" href="pixelJump.html">
+                    <span class="nav-chip nav-chip-mini" aria-hidden="true"><img src="../media/ic_pixel.svg" alt=""></span>
+                    <span>픽셀 점프</span>
+                </a>
+            </nav>
+
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">픽셀 점프</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner">
+                    <div class="eyebrow">Mini Game</div>
+                    <div class="title-row">
+                        <h1 class="page-title">픽셀 점프 🕹️</h1>
+                        <div class="pill">← → 이동 · Space 점프</div>
+                    </div>
+
+                    <!-- 게임 화면 -->
+                    <div class="game-stage" id="stage" tabindex="0" aria-label="픽셀 점프 게임 화면">
+                        <div class="sky" aria-hidden="true"></div>
+                        <div class="clouds" aria-hidden="true">
+                            <span class="cloud c1"></span>
+                            <span class="cloud c2"></span>
+                            <span class="cloud c3"></span>
+                        </div>
+                        <div class="skyline" aria-hidden="true"></div>
+                        <div class="ground" aria-hidden="true"></div>
+
+                        <!-- 플레이어 (픽셀 캐릭터) -->
+                        <div class="player" id="player" aria-hidden="true">
+                            <span class="eye left"></span>
+                            <span class="eye right"></span>
+                            <span class="blush bl"></span>
+                            <span class="blush br"></span>
+                        </div>
+
+                        <!-- 점수 -->
+                        <div class="hud" aria-hidden="true">
+                            <span class="hud-label">SCORE</span>
+                            <span class="hud-score" id="score">0</span>
+                            <span class="hud-best" id="best">BEST 0</span>
+                        </div>
+
+                        <!-- 시작 / 게임오버 화면 -->
+                        <div class="game-overlay" id="overlay">
+                            <div class="overlay-card">
+                                <div class="overlay-title" id="overlayTitle">픽셀 점프</div>
+                                <div class="overlay-desc" id="overlayDesc">
+                                    다가오는 블록을 <b>Space</b>로 뛰어넘으세요!<br>
+                                    <b>←</b> <b>→</b> 로 움직일 수 있어요.
+                                </div>
+                                <button type="button" class="btn-dark overlay-btn" id="startBtn">게임 시작 ▶</button>
+                                <div class="overlay-hint">Space 키로도 시작 / 다시하기</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 모바일 조작 버튼 -->
+                    <div class="touch-controls" aria-hidden="true">
+                        <button type="button" class="touch-btn" data-key="left">◀</button>
+                        <button type="button" class="touch-btn touch-jump" data-key="jump">JUMP</button>
+                        <button type="button" class="touch-btn" data-key="right">▶</button>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="sec-label">🎮 게임 방법</div>
+                    <div class="card">
+                        <ul class="rule-list">
+                            <li><b>←</b> <b>→</b> 방향키로 캐릭터를 좌우로 움직여요.</li>
+                            <li><b>Space</b> 로 점프해서 다가오는 핑크 블록을 뛰어넘어요.</li>
+                            <li>블록에 부딪히면 게임 오버! 오래 버틸수록 점수가 올라가요.</li>
+                            <li>시간이 지날수록 블록이 점점 빨라져요. 최고 점수에 도전해 보세요!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

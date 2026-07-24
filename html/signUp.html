@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <div class="window">
+        <!-- 사이드바 -->
+        <aside class="sidebar">
+            <div class="traffic">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="side-label">Favorites</div>
+            <nav class="side-nav">
+                <a class="nav-item" href="index.html"><span class="nav-chip" style="background:#ef7a85"></span><span>홈</span></a>
+                <a class="nav-item" href="myClass.html"><span class="nav-chip" style="background:#3b82f6"></span><span>나의 수업</span></a>
+                <a class="nav-item" href="myHoliday.html"><span class="nav-chip" style="background:#f5b544"></span><span>나의 휴일</span></a>
+                <a class="nav-item" href="myProfile.html"><span class="nav-chip" style="background:#34c759"></span><span>나의 프로필</span></a>
+                <a class="nav-item" href="myTrip.html"><span class="nav-chip" style="background:#5ac8fa"></span><span>나의 여행지</span></a>
+            </nav>
+            <div class="side-label">바로가기</div>
+            <nav class="side-nav">
+                <a class="nav-item active" href="signUp.html"><span class="nav-chip" style="background:#af7bef"></span><span>회원가입</span></a>
+            </nav>
+            <div class="side-footer">© 2026 백승현<br>SKALA 과정 실습 · Finder Edition</div>
+        </aside>
+
+        <!-- 메인 -->
+        <main class="main-col">
+            <div class="toolbar">
+                <div class="toolbar-arrows"><span>‹</span><span>›</span></div>
+                <div class="toolbar-title">회원가입</div>
+                <button type="button" class="theme-toggle" role="switch"
+                        aria-checked="false" aria-label="다크 모드">
+                    <span class="knob" aria-hidden="true">
+                        <svg class="ico ico-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4.1" fill="url(#sunCore)"/>
+                            <g stroke="url(#sunRay)" stroke-width="1.9" stroke-linecap="round">
+                                <line x1="12" y1="2.4" x2="12" y2="4.9"/>
+                                <line x1="12" y1="19.1" x2="12" y2="21.6"/>
+                                <line x1="2.4" y1="12" x2="4.9" y2="12"/>
+                                <line x1="19.1" y1="12" x2="21.6" y2="12"/>
+                                <line x1="5.05" y1="5.05" x2="6.8" y2="6.8"/>
+                                <line x1="17.2" y1="17.2" x2="18.95" y2="18.95"/>
+                                <line x1="18.95" y1="5.05" x2="17.2" y2="6.8"/>
+                                <line x1="6.8" y1="17.2" x2="5.05" y2="18.95"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="sunCore" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFD770"/><stop offset="1" stop-color="#FFAE1A"/>
+                                </linearGradient>
+                                <linearGradient id="sunRay" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFCB52"/><stop offset="1" stop-color="#FF9E14"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="ico ico-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M20.6 13.6A8.4 8.4 0 1 1 10.4 3.4a6.6 6.6 0 0 0 10.2 10.2z" fill="url(#moonBody)"/>
+                            <circle cx="15.4" cy="7.6" r="0.95" fill="#FFFFFF" fill-opacity=".9"/>
+                            <circle cx="18.2" cy="10.8" r="0.6" fill="#FFFFFF" fill-opacity=".8"/>
+                            <circle cx="16.9" cy="4.9" r="0.5" fill="#FFFFFF" fill-opacity=".7"/>
+                            <defs>
+                                <linearGradient id="moonBody" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#7B7BFF"/><stop offset="1" stop-color="#4B45C9"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <div class="pane">
+                <div class="pane-inner signup-wrap">
+                    <div class="signup-inner">
+                        <div class="signup-head">
+                            <div class="eyebrow">Join the universe</div>
+                            <h1 class="page-title" style="font-size:34px">회원가입</h1>
+                            <p class="lead" style="margin:8px auto 0">유니버스에 합류하고 새 소식을 받아보세요.</p>
+                        </div>
+
+                        <form action="signUpResult.html" method="get" class="form-card">
+                            <fieldset>
+                                <legend>👤 기본 정보</legend>
+                                <label class="field"><span>아이디</span>
+                                    <input type="text" id="userId" name="userId" placeholder="아이디를 입력하세요" required>
+                                </label>
+                                <label class="field"><span>비밀번호</span>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                                </label>
+                                <label class="field"><span>이름</span>
+                                    <input type="text" id="name" name="name" placeholder="백승현" required>
+                                </label>
+                                <label class="field"><span>이메일</span>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                                </label>
+                                <label class="field"><span>전화번호</span>
+                                    <input type="tel" id="phone" name="phone" placeholder="010-0000-0000">
+                                </label>
+                                <label class="field"><span>생년월일</span>
+                                    <input type="date" id="birth" name="birth">
+                                </label>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>ℹ️ 추가 정보</legend>
+                                <div class="field">
+                                    <span>성별</span>
+                                    <div class="radio-row">
+                                        <label><input type="radio" name="gender" value="male">남성</label>
+                                        <label><input type="radio" name="gender" value="female">여성</label>
+                                    </div>
+                                </div>
+                                <label class="field"><span>거주 지역</span>
+                                    <select id="region" name="region">
+                                        <option value="">-- 선택하세요 --</option>
+                                        <option value="seoul">서울</option>
+                                        <option value="gyeonggi">경기</option>
+                                        <option value="incheon">인천</option>
+                                        <option value="busan">부산</option>
+                                        <option value="etc">기타</option>
+                                    </select>
+                                </label>
+                                <label class="field"><span>관심 분야 (여러 개 선택 가능)</span>
+                                    <select id="hobby" name="hobby" multiple size="4">
+                                        <option value="ai">인공지능</option>
+                                        <option value="web">웹 개발</option>
+                                        <option value="data">데이터 분석</option>
+                                        <option value="design">디자인</option>
+                                    </select>
+                                </label>
+                                <label class="field"><span>자기소개</span>
+                                    <textarea id="intro" name="intro" placeholder="자신을 소개해주세요"></textarea>
+                                </label>
+                                <div class="check-row">
+                                    <input type="checkbox" id="agree" name="agree" value="yes" required>
+                                    <label for="agree">이용약관에 동의합니다</label>
+                                </div>
+                            </fieldset>
+
+                            <div class="btn-row">
+                                <input type="submit" class="btn-dark" value="가입하기 🚀">
+                                <input type="reset" class="btn-ghost" value="다시 작성">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bar">
+                
+                <span>Seung Hyun Baek</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
