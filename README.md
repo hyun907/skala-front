@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 백승현의 유니버스 · SKALA FRONT
+# 🚀 SKALA FRONT 과제 제출
 
 **macOS Finder 감성으로 만든 나만의 개인 Hub**
 프로필 · 수업 · 휴일 · 여행을 한곳에 모은 정적 웹사이트
